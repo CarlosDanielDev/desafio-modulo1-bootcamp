@@ -53,6 +53,7 @@ server.put('/projects/:id', checkIdInArray, checkIdExists, (req, res)=>{
   return res.json(projects)
 
 })
+//DELETE: /projects/:id
 server.delete('/projects/:id', checkIdInArray, checkIdExists, (req, res)=>{
   const {id} = req.params
 
