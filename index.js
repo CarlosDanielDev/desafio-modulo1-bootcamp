@@ -1,12 +1,13 @@
 const express = require('express')
 
 const server = express()
-
+let numberOfRequests
 server.use(express.json())
 const projects = []
 server.use((req, res, next)=>{
+  numberOfRequests++
   console.time('Request')
-  console.log(`Método: ${req.method}; URL: ${req.url}`)
+  console.log(`Método: ${req.method}; URL: ${req.url}; Numero de requests: ${numberOfRequests}`)
   next()
   console.timeEnd('Request')
 })
