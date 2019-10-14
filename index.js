@@ -1,7 +1,7 @@
 const express = require('express')
 
 const server = express()
-let numberOfRequests
+let numberOfRequests = 0
 server.use(express.json())
 const projects = []
 server.use((req, res, next)=>{
